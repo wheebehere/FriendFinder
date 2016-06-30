@@ -1,116 +1,261 @@
+
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<title>FriendFinder Survey</title>
-</head>
+	<meta charset="UTF-8">
+	<title>FriendFinder</title>
 
+	<!-- Latest compiled and minified CSS & JS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<!-- Font Awesome Glyphicons -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+	<!-- Chosen -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
+</head>
 <body>
 
-<!-- Compiled and minified CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+	<div class="container">
 
- <!-- Compiled and minified JavaScript -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+		<h2>Survey Questions</h2>
+		<hr>
 
- 	<div class="teal lighten-2">This is a card panel with a teal lighten-2 class</div>
-    
-    <div class="card-panel">
-      <span class="blue-text text-darken-2">This is a card panel with dark blue text</span>
-    </div>        
+		<h3><strong>About You</strong></h3>
+		<h4>Name (Required)</h4>
+		<input type="text" name="" id="name" class="form-control" required >
 
-	<div class="row">
-    	<form class="col s12">
-	    <div class="row">
-	    <input placeholder="" " id="name" type="text" class="validate">
-        	<div class="input-field col s6">
-        		<input placeholder="">
-          		<label for="name">Name (Required)</label>
-        	</div>
-      	</div>
-      <div class="input-field col s6">
-          <input placeholder="" id="photo" type="text" class="validate">
-          <label for="photo">Link to Photo Image (Required)</label>
-        </div>
-    	</form>   
-    </div>
+		<h4>Link to Photo Image (Required)</h4>
+		<input type="text" name="" id="photo" class="form-control" required >
+
+		<hr>
+
+		<h3><strong>Question 1</strong></h3>
+		<h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q1">
+	 		<option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+      	</select>
+
+		<h3><strong>Question 2</strong></h3>
+		<h4>Generally speaking, you rely more on your experience than your imagination.</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q2">
+	 		<option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+      	</select>
 
 
-	<div class="freetime col s12">
-    	<select>
-	      <option value="" freetime selected>
-	      What do you like to do in your freetime?</option>
-	      <option value="1">Being outdoors</option>
-	      <option value="2">Enjoy watching a good movie</option>
-	      <option value="3">Cooking up a great meal</option>
-	      <option value="4">Hanging out at home</option>
-	    </select>
-    	<label>freetime</label>
-	</div>
-	<p></p>
-	<div class="workweek col s12">
-    	<select>
-	      <option value="" workweek selected>
-	      What is your work week like?</option>
-	      <option value="1">M-F Full-time</option>
-	      <option value="2">M-F Part-time</option>
-	      <option value="3">Nights/Weekends</option>
-	      <option value="4">I make my own hours</option>
-	    </select>
-    	<label>workweek</label>
-	</div>
-	<p></p>
+		<h3><strong>Question 3</strong></h3>
+		<h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q3">
+	 		<option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+      	</select>
 
-	<div class="movietype col s12">
-    	<select>
-	      <option value="" movietype selected>
-	      What type of movies do you like?</option>
-	      <option value="1">Comedy</option>
-	      <option value="2">Sci-Fi</option>
-	      <option value="3">Drama</option>
-	      <option value="4">Action</option>
-	    </select>
-    	<label>movietype</label>
+
+		<h3><strong>Question 4</strong></h3>
+		<h4>You rarely do something just out of sheer curiosity.</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q4">
+	 		<option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+      	</select>
+
+
+		<h3><strong>Question 5</strong></h3>
+		<h4>People can rarely upset you.</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q5">
+	 		<option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+      	</select>
+
+
+		<h3><strong>Question 6</strong></h3>
+		<h4>It is often difficult for you to relate to other people’s feelings.</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q6">
+	 		<option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+      	</select>
+
+
+		<h3><strong>Question 7</strong></h3>
+		<h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q7">
+	 		<option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+      	</select>
+
+		<h3><strong>Question 8</strong></h3>
+		<h4>You rarely get carried away by fantasies and ideas.</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q8">
+	 		<option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+      	</select>
+
+		<h3><strong>Question 9</strong></h3>
+		<h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q9">
+	 		<option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+      	</select>
+
+		<h3><strong>Question 10</strong></h3>
+		<h4>You feel more energetic after spending time with a group of people.</h4>
+	 	<select data-placeholder="" class="chosen-select" id="q10">
+	 		<option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+      	</select>
+
+		<br>
+		<br>
+
+		<!-- Submit Button -->
+		<button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+ Submit</button>
+
+		<hr>
+	    <footer class="footer">
+	      <div class="container">
+		        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a></p>
+	      </div>
+	    </footer>
+
 	</div>
-	<p></p>
-	<div class="outdoor col s12">
-    	<select>
-	      <option value="" outdoor selected>
-	      What type of outdoor activies do you like?</option>
-	      <option value="1">Biking</option>
-	      <option value="2">Swimming</option>
-	      <option value="3">Gardening</option>
-	      <option value="4">As long as it's fun and outdoors, I like it!</option>
-	    </select>
-    	<label>outdoor</label>
+
+	<!-- Modal -->
+	<div id="resultsModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h2 class="modal-title"><strong>Best Match</strong></h2>
+	      </div>
+	      <div class="modal-body">
+	        <h2 id="matchName"></h2>
+	        <img id="matchImg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+
+	  </div>
 	</div>
-	<p></p>
-	<div class="foodtype col s12">
-    	<select>
-	      <option value="" foodtype selected>
-	      What are your favorite types of food?</option>
-	      <option value="1">Italian</option>
-	      <option value="2">Spanish</option>
-	      <option value="3">Chinese/Japenese</option>
-	      <option value="4">I love food!</option>
-	    </select>
-    	<label>foodtype</label>
-	</div>
-	<p></p>
-	<div class="indoors col s12">
-    	<select>
-	      <option value="" indoors selected>
-	      What do you like to do when you're stuck indoors?</option>
-	      <option value="1">Watch TV</option>
-	      <option value="2">Read a book</option>
-	      <option value="3">Hanging out with friends</option>
-	      <option value="4">Play video games</option>
-	    </select>
-    	<label>indoors</label>
-	</div>
-	<p></p>
+
+  <script type="text/javascript">
+
+  	// Chosen CSS
+    var config = {
+      '.chosen-select'           : {},
+      '.chosen-select-deselect'  : {allow_single_deselect:true},
+      '.chosen-select-no-single' : {disable_search_threshold:10},
+      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+      '.chosen-select-width'     : {width:"95%"}
+    }
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
+
+    // Capture the form inputs 
+    $("#submit").on("click", function(){
+
+    	// Form validation
+    	function validateForm() {
+		  var isValid = true;
+		  $('.form-control').each(function() {
+		    if ( $(this).val() === '' )
+		        isValid = false;
+		  });
+
+		  $('.chosen-select').each(function() {
+
+		  	if( $(this).val() === "")
+		  		isValid = false
+		  })
+		  return isValid;
+		}
+
+		// If all required fields are filled
+		if (validateForm() == true)
+		{
+			// Create an object for the user's data
+	    	var userData = {
+	    		name: $("#name").val(),
+	    		photo: $("#photo").val(),
+	    		scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
+	    	}
+
+
+	    	// Grab the URL of the website
+	    	var currentURL = window.location.origin;
+
+	    	// AJAX post the data to the friends API. 
+	    	$.post(currentURL + "/api/friends", userData, function(data){
+
+	    		// Grab the result from the AJAX post so that the best match's name and photo are displayed.
+	    		$("#matchName").text(data.name);
+	    		$('#matchImg').attr("src", data.photo);
+
+		    	// Show the modal with the best match 
+		    	$("#resultsModal").modal('toggle');
+
+	    	});
+		}
+		else
+		{
+			alert("Please fill out all fields before submitting!");
+		}
+    	
+    	return false;
+    });
+
+
+  </script>
 
 </body>
-
 </html>
